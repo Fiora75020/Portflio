@@ -1,0 +1,78 @@
+/* Paramètres generaux*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    background: #000101;
+    color: #fefeff
+}
+
+
+body {
+    font-family: 'Inconsolata', monospace;
+    background: #000101;
+    color: #fefeff;
+    transition: 0.7s ease-in-out
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h2{
+    font-size: calc(3rem + 5vw);
+    text-align: center;
+    color: rgb(217, 217, 217);
+    font-family: bold;
+}
+
+.tittle{
+    font-size: calc(1.5rem + 5vw);
+    letter-spacing: 0;
+}
+
+span{
+    display: inline-block;
+}
+
+a, :visited{
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    color: #fefeff;
+    transition: 0.1s linear;
+    font-size: {0.8rem + 0.8vw};
+}
+
+a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+   
+    background: #fefeff;
+    height: 1px;
+    bottom: -4px;
+    left: 0;
+    transform-origin: left;
+}
+
+a:hover{
+    transform: scale(1.04);
+    color: rgb(217, 217, 217);
+}
+a:hover::after{
+    animation: animlink 1.4s infinite ease-in-out;
+}
+
+@keyframes animlink {
+    50%{
+        transform: scaleX(0.2);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+/* Paramètres par effet d'apparition*/
